@@ -15,7 +15,8 @@ app.get('/', (req, res) => {
 app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
 
-app.use("/static", express.static('./static/'))
+app.use("/static", express.static('./static'))
+app.use('/static', express.static(__dirname + 'static'))
 
 
 app.listen(3003)
